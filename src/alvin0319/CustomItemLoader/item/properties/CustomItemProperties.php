@@ -446,7 +446,7 @@ final class CustomItemProperties
     public function setMiningSpeed(float $mining_speed): void
     {
         $this->mining_speed = $mining_speed;
-        $this->nbt->getCompoundTag("components")?->getCompoundTag("item_properties")?->setFloat("mining_speed", $mining_speed);
+        $this->nbt->getCompoundTag("components")?->getCompoundTag("item_properties")?->setFloat("mining_speed", 1.0);
     }
 
     /**
@@ -670,7 +670,7 @@ final class CustomItemProperties
                     ->setByte("use_efficiency", 1)
                     ->setTag("destroy_speeds", new ListTag([CompoundTag::create()
                         ->setTag("block", CompoundTag::create()
-                            ->setString("tags", "q.any_tag('dirt, sand, gravel, grass, snow')")
+                            ->setString("tags", "q.any_tag('dirt', 'sand', 'gravel', 'grass', 'snow')")
                         )
                         ->setInt("speed", $speed)
                     ])));
@@ -680,7 +680,7 @@ final class CustomItemProperties
                     ->setByte("use_efficiency", 1)
                     ->setTag("destroy_speeds", new ListTag([CompoundTag::create()
                         ->setTag("block", CompoundTag::create()
-                            ->setString("tags", "q.any_tag('stone, metal, diamond_pick_diggable, rail, mob_spawner')")
+                            ->setString("tags", "q.any_tag('stone', 'metal', 'diamond_pick_diggable', 'rail', 'mob_spawner')")
                         )
                         ->setInt("speed", $speed)
                     ])));
@@ -690,7 +690,7 @@ final class CustomItemProperties
                     ->setByte("use_efficiency", 1)
                     ->setTag("destroy_speeds", new ListTag([CompoundTag::create()
                         ->setTag("block", CompoundTag::create()
-                            ->setString("tags", "q.any_tag('wood, pumpkin, plant, text_sign')")
+                            ->setString("tags", "q.any_tag('wood', 'pumpkin', 'plant', 'text_sign')")
                         )
                         ->setInt("speed", $speed)
                     ])));
