@@ -676,18 +676,8 @@ final class CustomItemProperties
                     ])));
                 break;
             case BlockToolType::PICKAXE:
-                $this->nbt->getCompoundTag("components")->setTag("minecraft:weapon", CompoundTag::create()
-                    ->setTag("on_hit_block", CompoundTag::create()
-                        ->setString("event", "dmg")
-                        ->setString("target", "self")
-                    )
-                );
                 $this->nbt->getCompoundTag("components")->setTag("minecraft:digger", CompoundTag::create()
                     ->setByte("use_efficiency", 1)
-                    ->setTag("on_dig", CompoundTag::create()
-                        ->setString("target", "self")
-                        ->setString("event", "dmg")
-                    )
                     ->setTag("destroy_speeds", new ListTag([CompoundTag::create()
                         ->setTag("block", CompoundTag::create()
                             ->setString("tags", "q.any_tag('stone', 'metal', 'diamond_pick_diggable', 'rail', 'mob_spawner')")
