@@ -684,7 +684,9 @@ final class CustomItemProperties
                         )
                         ->setInt("speed", $speed)
                     ])));
-                $this->addDigSpeed("minecraft:sandstone", $speed);
+                foreach (ToolDigger::PICKAXE as $block) {
+                    $this->addDigSpeed($block, $speed);
+                }
                 break;
             case BlockToolType::AXE:
                 $this->nbt->getCompoundTag("components")->setTag("minecraft:digger", CompoundTag::create()
