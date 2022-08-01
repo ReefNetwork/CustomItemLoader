@@ -684,7 +684,7 @@ final class CustomItemProperties
                         )
                         ->setInt("speed", $speed)
                     ])));
-//                $this->nbt->getCompoundTag("components")->setTag("item_tags",new ListTag([new StringTag("minecraft:is_pickaxe")]));
+                $this->addDigSpeed("minecraft:sandstone", $speed);
                 break;
             case BlockToolType::AXE:
                 $this->nbt->getCompoundTag("components")->setTag("minecraft:digger", CompoundTag::create()
@@ -697,6 +697,14 @@ final class CustomItemProperties
                     ])));
                 break;
         }
+    }
+
+    private function addDigSpeed(string $block, int $speed): void
+    {
+        $this->nbt->getCompoundTag("components")->getCompoundTag("minecraft:digger")->getListTag("destroy_speeds")->push(CompoundTag::create()
+            ->setString("block", $block)
+            ->setInt("speed", $speed)
+        );
     }
 
     /**
