@@ -697,6 +697,9 @@ final class CustomItemProperties
                         )
                         ->setInt("speed", $speed)
                     ])));
+                foreach (ToolDigger::AXE as $block) {
+                    $this->addDigSpeed($block, $speed);
+                }
                 break;
         }
     }
