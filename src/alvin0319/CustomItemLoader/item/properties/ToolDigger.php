@@ -19,4 +19,8 @@ interface ToolDigger
 
         "minecraft:furnace", "minecraft:lit_furnace", "minecraft:lit_blast_furnace", "minecraft:blast_furnace"
     ];
+
+    const AXE = [
+        "minecraft:chest","minecraft:crafting_table"
+    ];
 }
