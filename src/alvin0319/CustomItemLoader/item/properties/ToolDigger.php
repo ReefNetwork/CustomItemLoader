@@ -21,6 +21,10 @@ interface ToolDigger
     ];
 
     const AXE = [
-        "minecraft:chest","minecraft:crafting_table"
+        "minecraft:chest", "minecraft:crafting_table"
+    ];
+
+    const HOE = [
+        "minecraft:leaves", "minecraft:leaves2"
     ];
 }

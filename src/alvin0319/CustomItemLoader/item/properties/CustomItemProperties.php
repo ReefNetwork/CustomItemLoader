@@ -701,6 +701,14 @@ final class CustomItemProperties
                     $this->addDigSpeed($block, $speed);
                 }
                 break;
+            case BlockToolType::HOE:
+                $this->nbt->getCompoundTag("components")->setTag("minecraft:digger", CompoundTag::create()
+                    ->setByte("use_efficiency", 1)
+                    ->setTag("destroy_speeds", new ListTag([])));
+                foreach (ToolDigger::HOE as $block) {
+                    $this->addDigSpeed($block, $speed);
+                }
+                break;
         }
     }
 
