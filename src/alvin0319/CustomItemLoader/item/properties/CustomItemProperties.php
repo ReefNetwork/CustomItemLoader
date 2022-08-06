@@ -664,6 +664,7 @@ final class CustomItemProperties
     {
         $this->toolType = $toolType;
 
+        // https://wiki.bedrock.dev/blocks/block-tags.html
         switch ($toolType) {
             case BlockToolType::SHOVEL:
                 $this->nbt->getCompoundTag("components")->setTag("minecraft:digger", CompoundTag::create()
@@ -674,6 +675,9 @@ final class CustomItemProperties
                         )
                         ->setInt("speed", $speed)
                     ])));
+                foreach (ToolDigger::SHOVEL as $block) {
+                    $this->addDigSpeed($block, $speed);
+                }
                 break;
             case BlockToolType::PICKAXE:
                 $this->nbt->getCompoundTag("components")->setTag("minecraft:digger", CompoundTag::create()
