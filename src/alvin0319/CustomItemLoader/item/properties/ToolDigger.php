@@ -5,7 +5,7 @@ namespace alvin0319\CustomItemLoader\item\properties;
 interface ToolDigger
 {
     const SHOVEL = [
-        "minecraft:concretePowder"
+        "minecraft:concretePowder", "minecraft:snow_layer", "minecraft:snow", "minecraft:soul_sand"
     ];
 
     const PICKAXE = [
@@ -23,6 +23,9 @@ interface ToolDigger
         "minecraft:red_glazed_terracotta", "minecraft:black_glazed_terracotta",
 
         "minecraft:furnace", "minecraft:lit_furnace", "minecraft:lit_blast_furnace", "minecraft:blast_furnace", "minecraft:hopper",
+
+        "minecraft:stonebrick", "minecraft:nether_brick", "minecraft:end_bricks", "minecraft:red_nether_brick", "minecraft:polished_blackstone_bricks",
+        "minecraft:cracked_polished_blackstone_bricks", "minecraft:chiseled_nether_bricks", "minecraft:cracked_nether_bricks", "minecraft:quartz_bricks",
 
         "minecraft:polished_basalt", "minecraft:polished_blackstone_bricks", "minecraft:polished_blackstone_brick_wall", "minecraft:chiseled_polished_blackstone",
         "minecraft:cracked_polished_blackstone_bricks", "minecraft:polished_blackstone_brick_slab", "minecraft:polished_blackstone_brick_double_slab", "minecraft:polished_blackstone",
