@@ -12,9 +12,7 @@ interface ToolDigger
         "minecraft:sandstone",
         "minecraft:concrete",
 
-        "minecraft:diamond_block",
-
-        "minecraft:undyed_shulker_box", "minecraft:shulker_box",
+        "minecraft:diamond_block", "minecraft:ender_chest", "minecraft:magma", "minecraft:undyed_shulker_box", "minecraft:shulker_box",
 
         "minecraft:purple_glazed_terracotta", "minecraft:white_glazed_terracotta",
         "minecraft:orange_glazed_terracotta", "minecraft:magenta_glazed_terracotta", "minecraft:light_blue_glazed_terracotta", "minecraft:yellow_glazed_terracotta",
