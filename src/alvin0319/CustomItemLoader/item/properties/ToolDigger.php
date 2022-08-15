@@ -9,18 +9,17 @@ interface ToolDigger
     ];
 
     const PICKAXE = [
-        "minecraft:sandstone",
-        "minecraft:concrete",
+        "minecraft:sandstone", "minecraft:concrete",
 
-        "minecraft:diamond_block", "minecraft:ender_chest", "minecraft:magma", "minecraft:undyed_shulker_box", "minecraft:shulker_box",
+        "minecraft:diamond_block", "minecraft:redstone_block", "minecraft:lapis_block", "minecraft:emerald_block",
+        "minecraft:ender_chest", "minecraft:magma", "minecraft:undyed_shulker_box", "minecraft:shulker_box",
+        "minecraft:furnace", "minecraft:lit_furnace", "minecraft:lit_blast_furnace", "minecraft:blast_furnace", "minecraft:hopper",
 
         "minecraft:purple_glazed_terracotta", "minecraft:white_glazed_terracotta",
         "minecraft:orange_glazed_terracotta", "minecraft:magenta_glazed_terracotta", "minecraft:light_blue_glazed_terracotta", "minecraft:yellow_glazed_terracotta",
         "minecraft:lime_glazed_terracotta", "minecraft:pink_glazed_terracotta", "minecraft:gray_glazed_terracotta", "minecraft:silver_glazed_terracotta",
         "minecraft:cyan_glazed_terracotta", "minecraft:blue_glazed_terracotta", "minecraft:brown_glazed_terracotta", "minecraft:green_glazed_terracotta",
         "minecraft:red_glazed_terracotta", "minecraft:black_glazed_terracotta",
-
-        "minecraft:furnace", "minecraft:lit_furnace", "minecraft:lit_blast_furnace", "minecraft:blast_furnace", "minecraft:hopper",
 
         "minecraft:stonebrick", "minecraft:nether_brick", "minecraft:end_bricks", "minecraft:red_nether_brick", "minecraft:polished_blackstone_bricks",
         "minecraft:cracked_polished_blackstone_bricks", "minecraft:chiseled_nether_bricks", "minecraft:cracked_nether_bricks", "minecraft:quartz_bricks",
