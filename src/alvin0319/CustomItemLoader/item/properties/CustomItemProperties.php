@@ -790,9 +790,9 @@ final class CustomItemProperties
             ->setTag("main_hand", CompoundTag::create()
                 ->setTag("first_person", CompoundTag::create()
                     ->setTag("scale", new ListTag([
-                        new FloatTag($x),
-                        new FloatTag($y),
-                        new FloatTag($z)
+                        new FloatTag($x/2),
+                        new FloatTag($y/2),
+                        new FloatTag($z/2)
                     ]))
                 )
                 ->setTag("third_person", CompoundTag::create()
@@ -806,9 +806,9 @@ final class CustomItemProperties
             ->setTag("off_hand", CompoundTag::create()
                 ->setTag("first_person", CompoundTag::create()
                     ->setTag("scale", new ListTag([
-                        new FloatTag($x),
-                        new FloatTag($y),
-                        new FloatTag($z)
+                        new FloatTag($x/2),
+                        new FloatTag($y/2),
+                        new FloatTag($z/2)
                     ]))
                 )
                 ->setTag("third_person", CompoundTag::create()
@@ -842,7 +842,7 @@ final class CustomItemProperties
         if (!$this->hand_equipped) {
             [$x, $y, $z] = [0.075, 0.125, 0.075];
         } else {
-            [$x, $y, $z] = [1, 1, 1];
+            [$x, $y, $z] = [0.1, 0.1, 0.1];
         }
         $newX = $x / ($size / 16);
         $newY = $y / ($size / 16);
