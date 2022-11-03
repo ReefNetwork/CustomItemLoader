@@ -842,7 +842,7 @@ final class CustomItemProperties
         if (!$this->hand_equipped) {
             [$x, $y, $z] = [0.075, 0.125, 0.075];
         } else {
-            [$x, $y, $z] = [0.1, 0.1, 0.1];
+            [$x, $y, $z] = [1, 1, 1];
         }
         $newX = $x / ($size / 16);
         $newY = $y / ($size / 16);
