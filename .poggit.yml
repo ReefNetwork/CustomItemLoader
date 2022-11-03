@@ -3,6 +3,7 @@ build-by-default: true
 branches:
   - master
   - pm4
+  - test/render_offset
 projects:
   CustomItemLoader:
     path: ""

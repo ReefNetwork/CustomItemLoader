@@ -785,6 +785,7 @@ final class CustomItemProperties
     public function setRenderOffsets(int $pngSize): void
     {
         [$x, $y, $z] = $this->calculateOffset($pngSize);
+        var_dump($x);
         // TODO: Find out rotation and position formula
         $this->nbt->getCompoundTag("components")?->setTag("minecraft:render_offsets", CompoundTag::create()
             ->setTag("main_hand", CompoundTag::create()
@@ -842,7 +843,7 @@ final class CustomItemProperties
         if (!$this->hand_equipped) {
             [$x, $y, $z] = [0.075, 0.125, 0.075];
         } else {
-            [$x, $y, $z] = [1, 1, 1];
+            [$x, $y, $z] = [0.1, 0.1, 0.1];
         }
         $newX = $x / ($size / 16);
         $newY = $y / ($size / 16);
