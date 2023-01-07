@@ -138,6 +138,14 @@ final class CustomItemManager{
 		return clone $this->packet;
 	}
 
+    /**
+     * @return ItemComponentPacketEntry[]
+     */
+    public function getPacketEntry(): array
+    {
+        return $this->packetEntries;
+    }
+
 	public function registerDefaultItems(array $data, bool $reload = false) : void{
 		if($reload){
 			ItemTranslator::reset();

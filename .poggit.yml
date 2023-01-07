@@ -2,7 +2,7 @@
 build-by-default: true
 branches:
   - master
-  - pm4
+  - overwrite_item_component
 projects:
   CustomItemLoader:
     path: ""
