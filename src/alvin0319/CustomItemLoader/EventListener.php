@@ -29,6 +29,7 @@ use pocketmine\item\enchantment\VanillaEnchantments;
 use pocketmine\item\Item;
 use pocketmine\math\Vector3;
 use pocketmine\network\mcpe\protocol\BiomeDefinitionListPacket;
+use pocketmine\network\mcpe\protocol\ItemComponentPacket;
 use pocketmine\network\mcpe\protocol\LevelEventPacket;
 use pocketmine\network\mcpe\protocol\PlayerAuthInputPacket;
 use pocketmine\network\mcpe\protocol\ResourcePackStackPacket;
@@ -48,6 +49,8 @@ use function implode;
 final class EventListener implements Listener
 {
 
+    private ?ItemComponentPacket $cachedItemComponentPacket = null;
+
     /** @var TaskHandler[][] */
     protected array $handlers = [];
 
@@ -63,9 +66,19 @@ final class EventListener implements Listener
                 $packet->experiments = new Experiments([
                     "data_driven_items" => true
                 ], true);
-            } elseif ($packet instanceof BiomeDefinitionListPacket) {
+//            } elseif ($packet instanceof BiomeDefinitionListPacket) {
+//                foreach ($event->getTargets() as $session) {
+//                    $session->sendDataPacket(CustomItemManager::getInstance()->getPacket());
+//                }
+            } elseif ($packet instanceof ItemComponentPacket) {
+                $entries = $packet->getEntries();
+                if ($this->cachedItemComponentPacket === null) {
+                    $this->cachedItemComponentPacket = ItemComponentPacket::create(array_merge($entries, CustomItemManager::getInstance()->getPacketEntry()));
+                }
+                if (count($entries) === count($this->cachedItemComponentPacket->getEntries())) return;
+
                 foreach ($event->getTargets() as $session) {
-                    $session->sendDataPacket(CustomItemManager::getInstance()->getPacket());
+                    $session->sendDataPacket($this->cachedItemComponentPacket);
                 }
             }
         }
