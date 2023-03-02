@@ -9,26 +9,36 @@ interface ToolDigger
     ];
 
     const PICKAXE = [
-        "minecraft:sandstone", "minecraft:concrete",
+        "minecraft:sandstone", "minecraft:concrete", "minecraft:smooth_stone", "minecraft:smooth_basalt",
 
-        "minecraft:diamond_block", "minecraft:redstone_block", "minecraft:lapis_block", "minecraft:emerald_block",
+        // 鉱石系
+        "minecraft:diamond_block", "minecraft:redstone_block", "minecraft:lapis_block", "minecraft:emerald_block", "minecraft:coal_block",
+
+        // チェスト系?
         "minecraft:ender_chest", "minecraft:magma", "minecraft:undyed_shulker_box", "minecraft:shulker_box",
-        "minecraft:furnace", "minecraft:lit_furnace", "minecraft:lit_blast_furnace", "minecraft:blast_furnace", "minecraft:hopper",
 
+        // レッドストーン系
+        "minecraft:furnace", "minecraft:lit_furnace", "minecraft:lit_blast_furnace", "minecraft:blast_furnace", "minecraft:hopper", "minecraft:dropper", "minecraft:dispenser",
+        "minecraft:observer",
+
+        // テラコッタ
         "minecraft:purple_glazed_terracotta", "minecraft:white_glazed_terracotta",
         "minecraft:orange_glazed_terracotta", "minecraft:magenta_glazed_terracotta", "minecraft:light_blue_glazed_terracotta", "minecraft:yellow_glazed_terracotta",
         "minecraft:lime_glazed_terracotta", "minecraft:pink_glazed_terracotta", "minecraft:gray_glazed_terracotta", "minecraft:silver_glazed_terracotta",
         "minecraft:cyan_glazed_terracotta", "minecraft:blue_glazed_terracotta", "minecraft:brown_glazed_terracotta", "minecraft:green_glazed_terracotta",
         "minecraft:red_glazed_terracotta", "minecraft:black_glazed_terracotta",
 
+        // レンガ系
         "minecraft:stonebrick", "minecraft:nether_brick", "minecraft:end_bricks", "minecraft:red_nether_brick", "minecraft:polished_blackstone_bricks",
         "minecraft:cracked_polished_blackstone_bricks", "minecraft:chiseled_nether_bricks", "minecraft:cracked_nether_bricks", "minecraft:quartz_bricks",
 
+        // 磨かれた系
         "minecraft:polished_basalt", "minecraft:polished_blackstone_bricks", "minecraft:polished_blackstone_brick_wall", "minecraft:chiseled_polished_blackstone",
         "minecraft:cracked_polished_blackstone_bricks", "minecraft:polished_blackstone_brick_slab", "minecraft:polished_blackstone_brick_double_slab", "minecraft:polished_blackstone",
         "minecraft:polished_blackstone_stairs", "minecraft:polished_blackstone_slab", "minecraft:polished_blackstone_double_slab", "minecraft:polished_blackstone_pressure_plate",
         "minecraft:polished_blackstone_button", "minecraft:polished_blackstone_wall",
 
+        // 階段系
         "minecraft:stone_stairs", "minecraft:brick_stairs", "minecraft:stone_brick_stairs", "minecraft:nether_brick_stairs", "minecraft:sandstone_stairs", "minecraft:quartz_stairs",
         "minecraft:red_sandstone_stairs", "minecraft:purpur_stairs", "minecraft:prismarine_stairs", "minecraft:dark_prismarine_stairs", "minecraft:prismarine_bricks_stairs",
         "minecraft:granite_stairs", "minecraft:diorite_stairs", "minecraft:andesite_stairs", "minecraft:polished_granite_stairs", "minecraft:polished_diorite_stairs",
